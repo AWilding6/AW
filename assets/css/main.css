@@ -4687,3 +4687,18 @@ input, select, textarea {
 		}
 
 	}
+/* ---- Center footer contact section (override Massively defaults) ---- */
+
+#footer > section.split.contact > section {
+    justify-content: center;
+    text-align: center;
+}
+
+#footer > section.split.contact > section > :first-child {
+    width: auto;
+    margin-right: 1rem;
+}
+
+#footer > section.split.contact > section > :last-child {
+    flex-grow: 0;
+}
