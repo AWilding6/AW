@@ -4687,18 +4687,21 @@ input, select, textarea {
 		}
 
 	}
-/* ---- Center footer contact section (override Massively defaults) ---- */
+/* ---- Center footer contact section (strong override) ---- */
 
-#footer > section.split.contact > section {
-    justify-content: center;
-    text-align: center;
+#footer .split.contact > section {
+  display: flex;                 /* ensure it's flex even if overridden */
+  align-items: center;
+  justify-content: center !important;
+  text-align: center !important;
 }
 
-#footer > section.split.contact > section > :first-child {
-    width: auto;
-    margin-right: 1rem;
+#footer .split.contact > section > :first-child {
+  width: auto !important;        /* overrides the fixed 6rem width */
+  margin: 0 1rem 0 0 !important;
+  flex: 0 0 auto;
 }
 
-#footer > section.split.contact > section > :last-child {
-    flex-grow: 0;
+#footer .split.contact > section > :last-child {
+  flex: 0 0 auto !important;
 }
